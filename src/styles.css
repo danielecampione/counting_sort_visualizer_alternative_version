@@ -1,0 +1,164 @@
+/* Stili CSS avanzati per il Visualizzatore Algoritmi */
+
+.root {
+    -fx-font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+/* Stili per i pulsanti con effetti animati */
+.button {
+    -fx-background-color: linear-gradient(to bottom, #667eea 0%, #764ba2 100%);
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 25px;
+    -fx-border-radius: 25px;
+    -fx-effect: dropshadow(gaussian, rgba(102, 126, 234, 0.4), 10, 0, 0, 0);
+    -fx-cursor: hand;
+}
+
+.button:hover {
+    -fx-background-color: linear-gradient(to bottom, #7c8ceb 0%, #8a5cb7 100%);
+    -fx-effect: dropshadow(gaussian, rgba(102, 126, 234, 0.8), 20, 0, 0, 0);
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+
+.button:pressed {
+    -fx-background-color: linear-gradient(to bottom, #5a6fd8 0%, #6a4a95 100%);
+    -fx-scale-x: 0.98;
+    -fx-scale-y: 0.98;
+}
+
+/* Stili per ComboBox */
+.combo-box {
+    -fx-background-color: #2d3748;
+    -fx-text-fill: white;
+    -fx-border-color: #4a5568;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+}
+
+.combo-box:hover {
+    -fx-border-color: #667eea;
+    -fx-effect: dropshadow(gaussian, rgba(102, 126, 234, 0.3), 5, 0, 0, 0);
+}
+
+.combo-box .list-cell {
+    -fx-background-color: #2d3748;
+    -fx-text-fill: white;
+}
+
+.combo-box .list-cell:hover {
+    -fx-background-color: #4a5568;
+}
+
+/* Stili per Slider */
+.slider {
+    -fx-control-inner-background: #2d3748;
+}
+
+.slider .track {
+    -fx-background-color: #4a5568;
+    -fx-background-radius: 5px;
+}
+
+.slider .thumb {
+    -fx-background-color: linear-gradient(to bottom, #667eea 0%, #764ba2 100%);
+    -fx-background-radius: 10px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 3, 0, 0, 1);
+}
+
+.slider .thumb:hover {
+    -fx-background-color: linear-gradient(to bottom, #7c8ceb 0%, #8a5cb7 100%);
+    -fx-scale-x: 1.2;
+    -fx-scale-y: 1.2;
+}
+
+/* Stili per ProgressBar */
+.progress-bar {
+    -fx-background-color: #2d3748;
+    -fx-background-radius: 10px;
+    -fx-border-radius: 10px;
+}
+
+.progress-bar .bar {
+    -fx-background-color: linear-gradient(to right, #ff6b6b, #4ecdc4, #45b7d1);
+    -fx-background-radius: 8px;
+    -fx-effect: dropshadow(gaussian, rgba(255, 107, 107, 0.5), 5, 0, 0, 0);
+}
+
+/* Animazione per la barra di progresso */
+.progress-bar .bar {
+    -fx-background-color: linear-gradient(to right,
+        #ff6b6b 0%,
+        #feca57 25%,
+        #48cae4 50%,
+        #4ecdc4 75%,
+        #45b7d1 100%);
+}
+
+/* Stili per Label */
+.label {
+    -fx-text-fill: white;
+}
+
+.title-label {
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow(gaussian, cyan, 20, 0, 0, 0);
+}
+
+.status-label {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow(gaussian, rgba(255, 255, 255, 0.3), 2, 0, 0, 0);
+}
+
+/* Stili per il grafico */
+.chart {
+    -fx-background-color: rgba(0, 0, 0, 0.3);
+    -fx-border-color: rgba(255, 255, 255, 0.1);
+    -fx-border-width: 1px;
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+}
+
+.chart-title {
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+.axis {
+    -fx-tick-label-fill: white;
+    -fx-font-size: 12px;
+}
+
+.axis-label {
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+}
+
+/* Stili per l'area di visualizzazione */
+.visualization-area {
+    -fx-background-color: rgba(255, 255, 255, 0.1);
+    -fx-background-radius: 15px;
+    -fx-border-radius: 15px;
+    -fx-border-color: rgba(255, 255, 255, 0.2);
+    -fx-border-width: 1px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0, 0, 5);
+}
+
+/* Animazioni CSS personalizzate */
+@keyframes glow {
+    0% {
+        -fx-effect: dropshadow(gaussian, cyan, 15, 0, 0, 0);
+    }
+    50% {
+        -fx-effect: dropshadow(gaussian, cyan, 30, 0, 0, 0);
+    }
+    100% {
+        -fx-effect: dropshadow(gaussian, cyan, 15, 0, 0, 0);
+    }
+}
