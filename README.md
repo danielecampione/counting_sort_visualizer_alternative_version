@@ -39,6 +39,39 @@ Il Counting Sort è un algoritmo di ordinamento non comparativo con complessità
 4. **Calcola posizioni cumulative** nell'array di conteggio
 5. **Costruisce l'array ordinato** usando le posizioni calcolate
 
+## Spiegazione algoritmica
+
+Di seguito è riportato un riassunto conciso in stile accademico dell'algoritmo di ordinamento, comprese le formulazioni matematiche delle complessità di tempo e spazio.
+
+#### Counting Sort
+
+Il Counting Sort è un algoritmo di ordinamento interi non basato su confronti che conta le occorrenze di ciascun valore chiave unico. Successivamente calcola le somme prefisse (conte cumulativi) per posizionare ciascun elemento nella sua posizione corretta nell'array di output.
+
+- **Pseudocodice**:
+  ```
+  procedure countingSort(A):
+      maxVal = max(A)
+      C = new array of zeros of size maxVal + 1
+      for each x in A:
+          C[x] = C[x] + 1
+      for i = 1 to maxVal:
+          C[i] = C[i] + C[i - 1]   # prefix sums
+      B = new array of same length as A
+      for i = length(A) - 1 downto 0: 
+          x = A[i]
+          B[C[x] - 1] = x
+          C[x] = C[x] - 1
+      return B
+  ```
+- **Complessità temporale**:
+  - Migliore, Medio, Peggiore: $\Theta(n + k)$, dove $k = \max(A)$.
+- **Complessità spaziale**: $O(n + k)$
+- **Nota Matematica**:  
+  Sia $n = |A|$ e $k = \max(A)$. Le frequenze di conteggio sono $O(n)$. Il calcolo delle somme dei prefissi è $O(k)$. La compilazione dell'output è $O(n)$. Quindi totale
+  $T(n, k) = O(n + k).$
+
+
+
 ## Architettura
 
 ## Funzionalità Tecniche
